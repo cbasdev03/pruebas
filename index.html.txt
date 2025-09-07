@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Sala 3: Sensores</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>📋 CRUD Sala 3: Sensores</h1>
+        <p>Gestiona los datos de los sensores de Temperatura, Movimiento y Consumo.</p>
+
+        <form id="form-sensores">
+            <div class="form-group">
+                <label for="sensor-temp">Temperatura (°C)</label>
+                <input type="number" id="sensor-temp" placeholder="Ej: 22.5" step="0.1" required />
+            </div>
+
+            <div class="form-group">
+                <label for="sensor-mov">Movimiento</label>
+                <select id="sensor-mov" required>
+                    <option value="">Seleccione...</option>
+                    <option value="detectado">Detectado</option>
+                    <option value="no-detectado">No detectado</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="sensor-consumo">Consumo (W)</label>
+                <input type="number" id="sensor-consumo" placeholder="Ej: 1500" step="1" required />
+            </div>
+
+            <button type="submit" id="btn-agregar">Agregar Sensor</button>
+        </form>
+
+        <table id="tabla-sensores">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Temperatura</th>
+                    <th>Movimiento</th>
+                    <th>Consumo</th>
+                    <th>Fecha y Hora</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
